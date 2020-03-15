@@ -1,0 +1,28 @@
+/* pages/home/components/typeBar.wxss */
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 40rpx 0;
+  border-radius: 30rpx 30rpx 0 0;
+}
+
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1
+}
+
+.flex-item text {
+  font-size: 24rpx;
+  padding-top: 16rpx;
+  color: #999999;
+}
+
+.item-IMG {
+  width: 60rpx;
+  height: 60rpx;
+  padding-bottom: 10rpx
+}

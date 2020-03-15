@@ -1,0 +1,44 @@
+/* pages/home/components/job-types/job-type.wxss */
+.job-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 110rpx;
+  margin-left: 5%;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+
+.job-bar image {
+  width: 42rpx;
+}
+
+.scroll-view_H {
+  width: 88%;
+}
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  align-items: baseline;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.job-item {
+  margin-right: 38rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #888888;
+}
+
+.active {
+  font-size: 36rpx !important;
+  color: #333333 !important;
+  font-weight: 600;
+}
+
+.unActive {
+  /* padding-top: 14rpx; */
+}

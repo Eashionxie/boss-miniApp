@@ -1,0 +1,26 @@
+/* components/x-tab-bar/x-tab-bar.wxss */
+.container {
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  /* border-bottom: 1rpx solid #cfcfcf */
+}
+.item {
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  display: inline-block;
+  position: relative
+}
+.active {
+  color: orange
+}
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  height: 8rpx;
+  width: 40%;
+  background-color: orange
+}

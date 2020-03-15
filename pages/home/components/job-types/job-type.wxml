@@ -1,0 +1,19 @@
+<view class="job-bar">
+  <scroll-view class="scroll-view_H" scroll-x bindscroll="scroll">
+    <view class="flex">
+      <view
+       wx:if="{{jobTypes && jobTypes.length}}"
+       class="job-item {{index === activeIndex ? 'active' : 'unActive'}}"
+       wx:for="{{jobTypes}}" wx:key="index"
+       bindtap="chooseType"
+       data-index="{{index}}">
+        {{item.jobName}}
+      </view>
+      <view wx:if="{{!jobTypes || !jobTypes.length}}" class="job-item active">
+        推荐职位
+      </view>
+    </view>
+  </scroll-view>
+  <image wx:if="{{jobTypes && jobTypes.length}}" src="/public/edit.png" mode="widthFix"></image>
+  <image wx:else class="addBtn" src="/public/icon/add.png" bindtap="updatejobTypes" mode="widthFix" style="width: 48rpx"></image>
+</view>

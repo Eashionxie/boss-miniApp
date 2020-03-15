@@ -1,0 +1,5 @@
+/* pages/secPage/map/map.wxss */
+.map-contianer {
+  width: 100%;
+  height: calc(100vh);
+}

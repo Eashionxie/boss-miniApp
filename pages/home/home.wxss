@@ -1,0 +1,43 @@
+/* pages/home/home.wxss */
+.search-bar {
+  height: 380rpx;
+}
+
+.search-bar text, .search-place {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.search-place {
+  /* padding-left: 30rpx; */
+  margin-top: 40rpx;
+  background-color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+}
+
+.search-place view {
+  padding-left: 30rpx;
+}
+
+.input-placeholder {
+  padding-left: 20rpx;
+}
+
+.type-bar {
+  margin-top: -80rpx;
+  border-radius: 30rpx 30rpx 0 0;
+}
+
+.contianer {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.line-bar {
+  height: 14rpx;
+  width: 200%;
+  margin-left: -50%;
+  background-color: rgba(248, 248, 248, 1);
+}

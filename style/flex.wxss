@@ -1,0 +1,37 @@
+.flexHsa {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flexHsb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexHfs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flexHfe {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.flexCC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}

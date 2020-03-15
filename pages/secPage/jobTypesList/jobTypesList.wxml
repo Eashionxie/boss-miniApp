@@ -1,0 +1,30 @@
+<wxs src="../../../wxs/appType.wxs" module="typeFliter" />
+<view class="flexHsb w90C title">
+  <text class="font44 font600">想找什么工作？</text>
+  <text class="font500 c_33">
+    <text class="c_Blue">{{userInfo.jobofLooking ? userInfo.jobofLooking.length : 0}}</text>
+    <text class=""> / 3</text>
+  </text>
+</view>
+<view class="c_66 font28 w90C">
+  添加多个求职期望，可获得更多精准高薪工作机会
+</view>
+<view class="w90C">
+  <view class="add-btn">
+    <view class="flexCC">
+      <image src="/public/icon/add2.png" mode="widthFix"></image>
+      <text class="font500 font30 c_Blue">继续添加求职期望</text>
+    </view>
+  </view>
+</view>
+
+<view class="w90C flexHsb" bindtap="chooseJonStatus">
+  <view class="left font32">
+    在职状态
+  </view>
+  <view class="right font28 c_66 flexHfe">
+    <view class="">{{typeFliter.userJobStatus(userInfo.userPostStatus || '')}}</view>
+    <image class="" src="/public/icon/right.png" mode="widthFix"></image>
+  </view>
+</view>
+  

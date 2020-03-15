@@ -1,0 +1,13 @@
+<!--pages/secPage/map/map.wxml-->
+<view class="map-contianer">
+  <map
+    id="loactionMap"
+    longitude="{{options.longitude}}"
+    latitude="{{options.latitude}}"
+    markers="{{markers}}"
+    show-location="true"
+    style="width: 100%; height: 100%"
+    show-location
+    >
+  </map>
+</view>

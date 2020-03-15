@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "x-tab-bar": "/components/x-tab-bar/x-tab-bar",
+    "type-bar": "./components/typeBar/typeBar",
+    "job-types": "./components/job-types/job-type",
+    "job-item": "/components/job-item/job-item"
+  },
+  "backgroundColor": "#019fa0"
+}

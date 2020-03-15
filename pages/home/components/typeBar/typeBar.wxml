@@ -1,0 +1,18 @@
+<view class="flex-box bgc_White">
+  <view class="flex-item">
+    <image class="item-IMG" src="/public/location.png"></image>
+    <text>附近工作</text>
+  </view>
+  <view class="flex-item">
+    <image class="item-IMG" src="/public/company.png"></image>
+    <text>热门公司</text>
+  </view>
+  <view class="flex-item">
+    <image class="item-IMG" src="/public/classes.png"></image>
+    <text>职位分类</text>
+  </view>
+  <view class="flex-item">
+    <image class="item-IMG" src="/public/send.png"></image>
+    <text>我要招人</text>
+  </view>
+</view>

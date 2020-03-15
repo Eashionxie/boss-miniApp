@@ -1,0 +1,72 @@
+/* pages/home/components/job-item/job-item.wxss */
+
+.line1 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 20rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #222222;
+}
+
+.salary {
+  color: #019fa0;
+  font-weight: 500;
+}
+
+.line2 text {
+  margin-right: 16rpx;
+  font-size: 26rpx;
+  color: #666666;
+}
+
+.line3 {
+  display: flex;
+  justify-content: flex-start;
+  margin: 26rpx 0;
+}
+
+.line3 text {
+  font-size: 24rpx;
+  margin-right: 10rpx;
+  padding: 4rpx 12rpx;
+  background-color: #efefef;
+  color: #555555;
+  border-radius: 8rpx;
+}
+
+.line4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.interviewer {
+  align-items: center;
+  display: flex;
+  margin-bottom: 30rpx;
+}
+
+.interviewer image {
+  display: inline-block;
+  width: 46rpx;
+  height: 46rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.interviewer text {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.location {
+  font-size: 24rpx;
+  color: #999999;
+}

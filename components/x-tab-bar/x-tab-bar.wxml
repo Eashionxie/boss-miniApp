@@ -1,0 +1,11 @@
+<!--components/x-tab-bar/x-tab-bar.wxml-->
+<view class="container">
+  <text
+   class="item {{index === activeIndex ? 'active' : ''}}"
+   wx:for="{{items}}"
+   wx:key="item"
+   bindtap="itemSelected"
+   data-item="{{item}}"
+   data-index="{{index}}"
+  >{{item}}</text>
+</view>

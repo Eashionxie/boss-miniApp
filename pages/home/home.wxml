@@ -1,0 +1,19 @@
+<!--pages/home/home.wxml-->
+<view class="search-bar bgc_Blue">
+  <text class="db font44 font600">
+    想找什么工作
+  </text>
+  <view class="search-place c_99 font500" bindtap="showSearch">
+    <view>
+      搜索职位、公司
+    </view>
+  </view>
+</view>
+<type-bar class="type-bar bgc_White db"></type-bar>
+<job-types jobTypes="{{userInfo.jobofLooking}}"></job-types>
+<view class="contianer">
+  <block wx:for="{{records}}" wx:key="index">
+    <job-item itemDetail="{{item}}"></job-item>
+    <view class="line-bar"></view>
+  </block>
+</view>

@@ -1,0 +1,102 @@
+<wxs src="../../../wxs/appType.wxs" module="typeFliter" />
+<view scroll-y class="{{isIphone ? 'main-container2' : 'main-container'}}">
+  <view class="line1 flexHsb">
+    <view class="font44 font600 c_33">
+      {{jobDetail.jobName}}
+    </view>
+    <view class="c_Blue font500">
+      {{jobDetail.minSalary + 'k' + '-' + jobDetail.maxSalary + 'k'}}{{jobDetail.salaryType ? '·' + jobDetail.salaryType : ''}}
+    </view>
+  </view>
+
+  <view class="flexHfs">
+    <view class="flexHfs p_30R">
+      <image class="icon" src="/public/icon/location.png" mode="widthFix"></image>
+      <text class="text">{{jobDetail.city}}</text>
+    </view>
+    <view class="flexHfs p_30R">
+      <image class="icon" src="/public/icon/shoutibao.png" mode="widthFix"></image>
+      <text class="text">{{jobDetail.workExp}}</text>
+    </view>
+    <view class="flexHfs">
+      <image class="icon" src="/public/icon/edu.png" mode="widthFix"></image>
+      <text class="text">{{jobDetail.eduLeve}}</text>
+    </view>
+  </view>
+
+  <view class="hr-card flexHfs">
+    <image class="" src="{{jobDetail.publisherId.avatarUrl}}" mode="widthFix"></image>
+    <view>
+      <view class="p_10B">
+        <text class="font500 p_20R">{{jobDetail.publisherId.nickName}}</text>
+        <text class="font24 c_99">刚刚活跃</text>
+      </view>
+      <view class="c_33 font28">
+        {{jobDetail.companyId.companyName}} · {{jobDetail.publisherId.userJob ? jobDetail.publisherId.userJob : ''}}
+      </view>
+    </view>
+  </view>
+
+  <view class="m_40T">
+    <view class="font36 font600">
+      职位详情
+    </view>
+    <view class="m_20T {{expand ? 'fullH' : 'minH'}}">
+      <rich-text nodes="{{jobDetail.detail}}"></rich-text>
+    </view>
+    <view wx:if="{{!expand}}" class="tac c_Blue showFull font28" bindtap="showAllText">
+      查看全部
+    </view>
+    <view class="tags-container flexHfs wrap">
+      <block wx:for="{{jobDetail.tags}}" wx:key="index">
+        <text>{{item}}</text>
+      </block>
+    </view>
+  </view>
+
+  <view class="m_40T">
+    <view class="font36 font600">
+      公司信息
+    </view>
+    <view class="com-card flexHfs">
+      <image class="" src="{{jobDetail.companyId.companyAvatar}}" mode="widthFix"></image>
+      <view>
+        <view class="p_10B">
+          <text class="font500 p_20R">{{jobDetail.companyId.companyName}}</text>
+        </view>
+        <view class="c_33 font28">
+          {{'互联网'}} · {{typeFliter.financingTypeFilter(jobDetail.companyId.financingType)}} · {{typeFliter.comSizeFilter(jobDetail.companyId.companySize)}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="m_40T">
+    <view class="font36 font600">
+      工作地址
+    </view>
+    <view class="flexHsb com_address" bindtap="showMap">
+      <view class="c_66 fon28">
+        {{jobDetail.companyId.companyAdresses[0].city + ' ' + jobDetail.companyId.companyAdresses[0].area + ' ' + jobDetail.companyId.companyAdresses[0].street + ' ' + jobDetail.companyId.companyAdresses[0].building + ' ' + jobDetail.companyId.companyAdresses[0].No + '室'}}
+      </view>
+      <image class="right-icon" src="/public/icon/right.png" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+
+<view class="flexHsa bgc_White bottom-bar {{isIphone ? 'p_100B' : ''}}">
+  <view class="flex1 tac c_66" bindtap="shareTap">
+    <image src="/public/icon/fenxiang2.png" mode="widthFix"/>
+    分享
+  </view>
+  <view class="flex1 tac {{isCollected ? 'c_Blue' : 'c_66'}}" bindtap="collectTap">
+    <image wx:if="{{isCollected}}" src="/public/icon/collected.png" mode="widthFix"/>
+    <image wx:else src="/public/icon/collect.png" mode="widthFix"/>
+    {{isCollected ? '已收藏' : '收藏'}}
+  </view>
+  <view class="flex3 tac">
+    <button class="bgc_Blue" size="default">
+      立即沟通
+    </button>
+  </view>
+</view>

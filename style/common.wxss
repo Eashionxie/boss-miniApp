@@ -1,0 +1,33 @@
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.w90C {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.tac {
+  text-align: center;
+}
+
+.tar {
+  text-align: right;
+}
+
+.dIb {
+  display: inline-block;
+}
+
+.db {
+  display: block;
+}

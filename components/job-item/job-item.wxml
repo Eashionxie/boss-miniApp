@@ -1,0 +1,28 @@
+<wxs src="../../wxs/appType.wxs" module="typeFliter" />
+<view class="container" bindtap="itemTap">
+  <view class="line1">
+    <text class="title">{{itemDetail.jobName}}</text>
+    <text class="salary">
+      <text class="">{{itemDetail.minSalary + 'k' + '-' + itemDetail.maxSalary + 'k'}}</text>
+      <text wx:if="{{itemDetail.salaryType}}" class="salary">·{{itemDetail.salaryType}}</text>
+    </text>
+  </view>
+  <view class="line2">
+    <text class="">{{itemDetail.companyId.companyName}}</text>
+    <text class="">{{typeFliter.comSizeFilter(itemDetail.companyId.companySize)}}</text>
+    <text class="">{{typeFliter.financingTypeFilter(itemDetail.companyId.financingType)}}</text>
+  </view>
+  <view class="line3">
+    <text>{{itemDetail.workExp}}</text>
+    <text>{{itemDetail.eduLeve}}</text>
+  </view>
+  <view class="line4">
+    <view class="interviewer">
+      <image src="{{itemDetail.publisherId.avatarUrl}}" mode="widthFix"></image>
+      <text>{{itemDetail.publisherId.nickName}}</text>
+    </view>
+    <view class="location">
+      {{itemDetail.city}}
+    </view>
+  </view>
+</view>

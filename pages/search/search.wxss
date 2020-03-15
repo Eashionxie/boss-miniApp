@@ -1,0 +1,45 @@
+/* pages/search/search.wxss */
+.input-container {
+  padding: 30rpx 0 20rpx 0;
+  border-bottom: 1px solid #efefef;
+}
+.input-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  margin-left: 5%;
+  /* padding: 40rpx 0; */
+}
+
+.input-box image {
+  width: 34rpx
+}
+
+.input-box input {
+  padding-left: 20rpx;
+}
+
+.main-container {
+  width: 90%;
+  margin: 0 5%;
+  padding-top: 60rpx;
+}
+
+.text-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30rpx -20rpx 0 0;
+}
+
+.historys {
+  display: inline-block;
+  font-size: 24rpx;
+  background-color: #efefef;
+  border-radius: 10rpx;
+  padding: 2rpx 10rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-right: 30rpx;
+  color: #444444;
+}

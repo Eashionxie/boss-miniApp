@@ -1,0 +1,27 @@
+module.exports = {
+  comSizeFilter: function (val) {
+    if (val === 0) return '1-19人'
+    if (val === 1) return '20-99人'
+    if (val === 2) return '100-499人'
+    if (val === 3) return '500-999人'
+    if (val === 4) return '1000-9999人'
+    if (val === 5) return '10000人以上'
+    else return '规模未知'
+  },
+  financingTypeFilter: function (val) {
+    if (val === 0) return '不需要融资'
+    if (val === 1) return '未融资'
+    if (val === 2) return 'A轮'
+    if (val === 3) return 'B轮'
+    if (val === 4) return 'C轮'
+    if (val === 5) return 'D轮及以上'
+    if (val === 6) return '已上市'
+    else return 'NaN'
+  },
+  userJobStatus: function(val) {
+    if (val === '0') return '离职-随时到岗'
+    if (val === '1') return '在职-暂不考虑'
+    if (val === '2') return '在职-月内到岗'
+    else return '未知'
+  }
+}

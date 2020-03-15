@@ -1,0 +1,4 @@
+/* pages/wxAuth/wxAuth.wxss */
+button {
+  margin-top: 50rpx;
+}

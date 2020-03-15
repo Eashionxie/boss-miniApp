@@ -1,0 +1,26 @@
+<!--pages/wxAuth/wxAuth.wxml-->
+<view class="full tac">
+  <image class="auth-img" src="../../public/身份认证.png" mode="widthFix"></image>
+  <text class="db font28 font600 c_33">
+    我们的小程序将获取您的以下权限：
+  </text>
+  <text class="db font24 c_99">
+    ·获取您的公开信息（昵称和头像等）
+  </text>
+  <text class="db font26 c_66">
+    （如未授权，可能影响您正常使用该小程序）
+  </text>
+  <button
+   wx:if="{{canIUse}}"
+   size="default"
+   class="bgc_Green font30 font400"
+   open-type="getUserInfo"
+   bindgetuserinfo="bindGetUserInfo">
+    确认授权
+  </button>
+  <button wx:else class="default" size="default" type="default" disabled>
+    请升级微信版本
+  </button>
+</view>
+
+

@@ -1,0 +1,39 @@
+/**app.wxss**/
+@import './style/common.wxss';
+@import './style/color.wxss';
+@import './style/font.wxss';
+@import './style/flex.wxss';
+
+page {
+  background-color: #ffffff;
+}
+
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+button {
+  background: initial;
+}
+
+button:focus{
+  outline: 0;
+}
+
+button::after{
+  border: none;
+}

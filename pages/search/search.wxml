@@ -1,0 +1,33 @@
+<view class="input-container">
+  <view class="input-box">
+    <image class="" src="/public/search.png" mode="widthFix"></image>
+    <input type="text" value="{{keyWords}}" placeholder="搜索职位、公司" focus
+    placeholder-class="holdoor"
+    confirm-type="search"
+    bindfocus="focusInput"
+    bindblur="bindblur"
+    bindconfirm="confirmInput"
+    ></input>
+  </view>
+</view>
+<view class="main-container">
+  <view wx:if="{{records && records.length}}" class="search-items">
+    <block wx:for="{{records}}" wx:key="index">
+      <job-item></job-item>
+    </block>
+  </view>
+  
+  <view wx:else class="search-history">
+    <view class="font40 font500">
+      历史搜索
+    </view>
+    <view class="text-content">
+      <view wx:for="{{3}}" wx:key="index"
+       class="historys"
+       bindtap="chooseHistoryItem"
+       data-item="{{item}}">
+        前端开发
+      </view>
+    </view>
+  </view>
+</view>
