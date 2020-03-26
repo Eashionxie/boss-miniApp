@@ -1,0 +1,5 @@
+<image-cropper id="image-cropper" limit_move="{{true}}" disable_rotate="{{true}}" width="{{width}}" height="{{height}}" imgSrc="{{src}}" limit_move="{{limit_move}}" disable_width="{{disable_width}}" disable_height="{{disable_height}}" bindload="cropperload" bindimageload="loadimage" bindtapcut="clickcut"></image-cropper>
+<view class="btn-box flexHfs">
+  <view class="bgc_White" bindtap="cancel">取消</view>
+  <view class="bgc_Blue" bindtap="submit">确定</view>
+</view>

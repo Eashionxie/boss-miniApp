@@ -1,0 +1,26 @@
+<view class="contianer">
+  <scroll-view class="left-bar" scroll-y bindscrolltoupper="" bindscrolltolower="" bindscroll="">
+    <block wx:for="{{jobTypes}}" wx:for-item="parent" wx:key="_id">
+      <view
+       class="type-item {{parent.typeName === activeType.typeName ? 'active' : ''}}"
+       catchtap="parentTap"
+       data-parent="{{parent}}"
+       data-index="{{index}}">
+        {{parent.typeName}}
+      </view>
+    </block>
+  </scroll-view>
+  <view class="right-content">
+    <view class="child-contianer">
+      <view
+       class="child-item"
+       wx:for="{{childTypes}}"
+       wx:for-item="child"
+       wx:key="_id"
+       catchtap="childTap"
+       data-child="{{child}}">
+        {{child.childTypeName}}
+      </view>
+    </view>
+  </view>
+</view>

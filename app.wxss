@@ -3,6 +3,7 @@
 @import './style/color.wxss';
 @import './style/font.wxss';
 @import './style/flex.wxss';
+@import './public/icon/user_icon/iconfont.wxss';
 
 page {
   background-color: #ffffff;

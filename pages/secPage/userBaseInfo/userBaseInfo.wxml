@@ -1,0 +1,73 @@
+<wxs src="../../../wxs/filters.wxs" module="filters"></wxs>
+<view class="w90C {{isIphone ? 'iospaddingb' : 'paddingb'}}">
+  <view class="font52 font500">填写基本信息</view>
+  <view class="font26 c_66 p_10TM">向BOY介绍一下自己吧</view>
+
+  <view class="flexHsb m_60TM bor_B p_40TBM" bindtap="chooseHeadImage">
+    <view class="">
+      <view class="font400">头像</view>
+      <view class="font24 c_66 p_10TM">上传求职照片被BOY回复的几率翻倍</view>
+    </view>
+    <image class="head-image" src="{{userInfo.avatarUrl}}" mode="scaleToFill"></image>
+  </view>
+
+  <view class="flexHsb bor_B p_40TBM">
+    <view class="font400">性别</view>
+    <view class="select-button c_Blue">
+      <view class="dIb {{userInfo.gender === 0 ? '' : 'bgc_Blue'}}" bindtap="changeGender" data-gender="{{1}}">男</view>
+      <view class="dIb {{userInfo.gender === 1 ? '' : 'bgc_Blue'}}" bindtap="changeGender" data-gender="{{0}}">女</view>
+    </view>
+  </view>
+
+  <view class="bor_B p_40TBM">
+    <view class="font28">姓名</view>
+    <input class="p_10TM" bindinput="nameInput" value="{{userInfo.nickName}}" type="text"></input>
+  </view>
+
+  <picker bindchange="chooseEduleve" value="{{index}}" range-key="key" range="{{eduLeves}}">
+    <view class="bor_B p_40TBM">
+      <view class="font28">最高学历</view>
+      <view class="p_10TM flexHsb">
+        <view class="font400 {{userInfo.eduLeve ? 'c_33' : 'c_99'}}">{{userInfo.eduLeve || ''}}</view>
+        <image class="right-icon" src="/public/icon/right.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </picker>
+
+  <picker
+    mode="date"
+    bindchange="chooseBirthday"
+    fields="month"
+    start="1940-01-01"
+    end="{{DateNow}}">
+    <view class="bor_B p_40TBM">
+      <view class="font28">出生年月</view>
+      <view class="p_10TM flexHsb">
+        <view class="font400 {{userInfo.birthday ? 'c_33' : 'c_99'}}">{{filters.dateFormat(userInfo.birthday, 'yyyy-MM') || '请选择'}}</view>
+        <image class="right-icon" src="/public/icon/right.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </picker>
+
+  <picker
+    mode="date"
+    bindchange="chooseWorkDate"
+    fields="month"
+    start="1940-01-01"
+    end="{{DateNow}}">
+    <view class="bor_B p_40TBM">
+      <view class="font28">参加工作时间</view>
+      <view class="p_10TM flexHsb">
+        <view class="font400 {{userInfo.workDate ? 'c_33' : 'c_99'}}">{{filters.dateFormat(userInfo.workDate, 'yyyy-MM') || '请选择'}}</view>
+        <image class="right-icon" src="/public/icon/right.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </picker>
+
+  <view class="bor_B p_40TBM">
+    <view class="font28">电话</view>
+    <input class="p_10TM" type="number" value="{{userInfo.tel}}" bindinput="telInput" placeholder="选填"></input>
+  </view>
+  
+  <view class="bgc_Blue btn font30 {{isIphone ? 'iosBottom' : ''}}" bindtap="commit">保存</view>
+</view>

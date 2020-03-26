@@ -1,0 +1,76 @@
+/* pages/secPage/expectPage/expectPage.wxss */
+.title {
+  padding: 30rpx 0 20rpx 0;
+}
+
+.right-arrow {
+  width: 36rpx;
+}
+
+.btn {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  bottom: 20rpx;
+  left: 5%;
+  width: 90% !important;
+  height:80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 6rpx;
+}
+
+.btn-delete {
+  width: 36%;
+  border-radius: 6rpx;
+  border: 1rpx solid #019fa0;
+  color: #019fa0;
+}
+
+.btn-save {
+  border-radius: 6rpx;
+  width: 60%;
+  margin-left: 20rpx;
+}
+
+.iosBottom {
+  bottom: 60rpx !important;
+}
+
+.p20TB {
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+}
+
+.p_60B {
+  padding-bottom: 100rpx;
+}
+
+.m_60T {
+  margin-top: 60rpx;
+}
+
+.m_80T {
+  margin-top: 80rpx;
+}
+
+.bor_B {
+  border-bottom: 1rpx solid #efefef;
+}
+
+.choose-job-types {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 80%;
+  background-color: #fff;
+}
+
+.full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}

@@ -7,13 +7,13 @@
        wx:for="{{jobTypes}}" wx:key="index"
        bindtap="chooseType"
        data-index="{{index}}">
-        {{item.jobName}}
+        {{item.jobType}}
       </view>
       <view wx:if="{{!jobTypes || !jobTypes.length}}" class="job-item active">
         推荐职位
       </view>
     </view>
   </scroll-view>
-  <image wx:if="{{jobTypes && jobTypes.length}}" src="/public/edit.png" mode="widthFix"></image>
+  <image wx:if="{{jobTypes && jobTypes.length}}" src="/public/edit.png" bindtap="updatejobTypes" mode="widthFix"></image>
   <image wx:else class="addBtn" src="/public/icon/add.png" bindtap="updatejobTypes" mode="widthFix" style="width: 48rpx"></image>
 </view>

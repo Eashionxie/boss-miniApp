@@ -1,0 +1,40 @@
+<view class="contianer">
+  <scroll-view class="scroll-contianer" scroll-y scroll-into-view="{{toView}}">
+    <view id="hot" class="location">
+      <image src="/public/location.png" mode="widthFix"></image>
+      <view bindtap="confirmCity" data-city="{{location}}">{{location || '定位失败'}}</view>
+    </view>
+    <view class="hot">
+      热门城市
+    </view>
+    <view class="hot-citys">
+      <block wx:for="{{hotCitys}}" wx:key="index">
+        <view class="hot-city" bindtap="confirmCity" data-city="{{item}}">
+          {{item}}
+        </view>
+      </block>
+    </view>
+    <block wx:for="{{citys}}" wx:key="index">
+      <view id="{{item.title}}" class="hot">{{item.title}}</view>
+      <view class="hot-citys">
+        <block wx:for="{{item.lists}}" wx:for-item="city" wx:for-index="i" wx:key="i">
+          <view class="hot-city" bindtap="confirmCity" data-city="{{city}}">{{city}}</view>
+        </block>
+      </view>
+    </block>
+  </scroll-view>
+  <view class="index-Bar">
+    <view
+      class="{{activeTitle === 'hot' ? 'activeBar' : ''}} bar-item"
+      bindtap="changeIndex" data-index="{{-1}}" data-title="hot"
+    >
+    {{'#'}}</view>
+    <block wx:for="{{citys}}" wx:key="index">
+      <view
+       class="{{item.title === activeTitle ? 'activeBar' : ''}} bar-item"
+       bindtap="changeIndex" data-index="{{index}}" data-title="{{item.title}}"
+      >
+      {{item.title}}</view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<view class="w90C">
+  <view class="font48 font500 m_40TM">我的优势</view>
+  <view class="font24 p_10TM">一句话介绍自己，突出核心优势</view>
+  <textarea class="m_40TM text-desc c_66" value="{{userInfo.discribe}}" placeholder="请输入" maxlength="{{140}}" bindinput="textInput"></textarea>
+  <view class="length-control c_Blue">
+    {{lengthNow}} / 140
+  </view>
+
+  <view class="bgc_Blue btn font30 {{isIphone ? 'iosBottom' : ''}}" bindtap="commit">保存</view>
+</view>

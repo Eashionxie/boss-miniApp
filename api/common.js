@@ -13,9 +13,9 @@ export function postUserInfo (data) {
 }
 
 export function uploadFile (data) {
-  return request('/mini-api/file/file-upload', data, 'post')
+  return request('/mini-api/common/file-upload', data, 'post')
 }
 
-export function getFile (data) {
-  return request('/api/file', data)
+export function coordinate2Address (data) {
+  return request('/mini-api/common/address-by-coordinate', data)
 }

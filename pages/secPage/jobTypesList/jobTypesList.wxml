@@ -6,11 +6,27 @@
     <text class=""> / 3</text>
   </text>
 </view>
-<view class="c_66 font28 w90C">
+<view class="c_66 font28 w90C m_40BM">
   添加多个求职期望，可获得更多精准高薪工作机会
 </view>
-<view class="w90C">
-  <view class="add-btn">
+
+<block wx:for="{{userInfo.jobofLooking}}" wx:key="index">
+  <view class="type-item flexHsb w90C" bindtap="toExpectPage" data-expectItem="{{item}}" data-index="{{index}}">
+    <view class="">
+      <view class="p_20TBM">
+        <text>[{{item.city}}]</text>
+        <text class="p_20LM">{{item.jobType}}</text>
+      </view>
+      <view class="font26 c_66">
+        {{item.minSalary + 'k' + ' - ' + item.maxSalary + 'k'}}
+      </view>
+    </view>
+    <image src="/public/icon/right.png" mode="widthFix"></image>
+  </view>
+</block>
+
+<view wx:if="{{userInfo.jobofLooking.length < 3}}" class="w90C">
+  <view class="add-btn" bindtap="toExpectPage" data-expectItem="{{''}}" data-index="{{3}}">
     <view class="flexCC">
       <image src="/public/icon/add2.png" mode="widthFix"></image>
       <text class="font500 font30 c_Blue">继续添加求职期望</text>
@@ -18,7 +34,8 @@
   </view>
 </view>
 
-<view class="w90C flexHsb" bindtap="chooseJonStatus">
+<picker bindchange="chooseJonStatus" value="{{index}}" range-key="value" range="{{postStatus}}">
+<view class="w90C flexHsb">
   <view class="left font32">
     在职状态
   </view>
@@ -27,4 +44,5 @@
     <image class="" src="/public/icon/right.png" mode="widthFix"></image>
   </view>
 </view>
+</picker>
   

@@ -1,7 +1,7 @@
 import checkStatus from './checkStatus.js'
 import { config } from './config'
 
-const baseUrl = config.baseUrl || "http://192.168.1.208:3000"
+const baseUrl = config.baseUrl || "http://192.168.1.19:3000"
 const request = (url, data, method) => {
   return new Promise((resolve, reject) =>{
     wx.showLoading({

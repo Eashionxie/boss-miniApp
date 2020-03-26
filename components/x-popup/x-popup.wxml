@@ -1,0 +1,5 @@
+<view class="mask" catchtap="closePop">
+  <view class="conent" catchtap="defaultTap">
+    <slot></slot>
+  </view>
+</view>

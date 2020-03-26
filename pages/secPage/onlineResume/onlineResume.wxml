@@ -1,0 +1,87 @@
+<wxs src="../../../wxs/appType.wxs" module="typeFliter" />
+<wxs src="../../../wxs/filters.wxs" module="filters"></wxs>
+<view class="info-contianer bor_B {{cardActive ? 'bgc_ef' : ''}}"
+  bind:touchstart="baseInfoTouch"
+  bind:touchend="baseInfoUntouch"
+  bind:touchcancel="baseInfoUntouch"
+  bindtap="fullBaseInfo">
+  <view class="w90C flexHsb">
+    <view class="info">
+      <view class="flexHfs">
+        <view class="font44 font500">
+          {{userInfo.userName || userInfo.nickName}}
+        </view>
+        <view class="iconfont icon-edit c_66"></view>
+      </view>
+      <view  wx:if="{{userInfo && userInfo.birthday}}" class="font26 p_20TM">
+        {{filters.ageFilter(userInfo.birthday) + '岁 · ' + filters.workExpFilter(userInfo.workDate) + ' · ' +  userInfo.eduLeve}}
+      </view>
+      <view wx:else class="font26 p_20TM">
+        待完善
+      </view>
+    </view>
+    <view class="header">
+      <image src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+
+<view class="bor_B m_60TM {{descActive? 'bgc_ef' : ''}}"
+  bind:touchstart="descTouch"
+  bind:touchend="descUntouch"
+  bind:touchcancel="descUntouch"
+  bindtap="fullDesc">
+  <view class="w90C flexHsb">
+    <view class="font36 font500">个人优势</view>
+    <view class="iconfont icon-edit c_66"></view>
+  </view>
+  <view class="w90C p_40TBM font28 c_66 comHei60">
+    {{userInfo.discribe || '暂未填写'}}
+  </view>
+</view>
+
+<picker class="bor_B" bindchange="chooseJonStatus" value="{{index}}" range-key="value" range="{{postStatus}}">
+<view class="w90C flexHsb p_20TBM">
+  <view class="left font36 font500">
+    求职状态
+  </view>
+  <view class="right font28 c_66 flexHfe">
+    <view class="">{{typeFliter.userJobStatus(userInfo.userPostStatus || '')}}</view>
+    <image class="" src="/public/icon/right.png" mode="widthFix"></image>
+  </view>
+</view>
+</picker>
+
+<view class="bor_B m_60TM p_20BM">
+  <view class="w90C flexHsb">
+    <view class="font36 font500">求职期望</view>
+    <view wx:if="{{userInfo.jobofLooking.length < 3}}" class="iconfont icon-add c_66"  bindtap="toExpectPage" data-expectItem="{{''}}" data-index="{{3}}"></view>
+  </view>
+  <block wx:for="{{userInfo.jobofLooking}}" wx:key="index">
+    <view class="type-item flexHsb w90C" bindtap="toExpectPage" data-expectItem="{{item}}" data-index="{{index}}">
+      <view class="">
+        <view class="p_10TBM font500 font28">
+          <text>[{{item.city}}]</text>
+          <text class="p_20LM">{{item.jobType}}</text>
+        </view>
+        <view class="font26 c_66">
+          {{item.minSalary + 'k' + ' - ' + item.maxSalary + 'k'}}
+        </view>
+      </view>
+      <image src="/public/icon/right.png" mode="widthFix"></image>
+    </view>
+  </block>
+</view>
+
+<view class="bor_B m_60TM p_20BM">
+  <view class="w90C flexHsb">
+    <view class="font36 font500">社交主页</view>
+    <view class="iconfont icon-add c_66"></view>
+  </view>
+  <block wx:for="{{userInfo.userWebSite}}" wx:key="index">
+    <view class="type-item flexHsb w90C" bindtap="toExpectPage" data-expectItem="{{item}}" data-index="{{index}}">
+      <view class="">{{item}}</view>
+      <image src="/public/icon/right.png" mode="widthFix"></image>
+    </view>
+  </block>
+</view>

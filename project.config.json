@@ -57,6 +57,13 @@
 			"current": -1,
 			"list": [
 				{
+					"id": 0,
+					"name": "pages/secPage/expectPage/expectPage",
+					"pathName": "pages/secPage/expectPage/expectPage",
+					"query": "expectItem=\"\"&index=3",
+					"scene": null
+				},
+				{
 					"id": -1,
 					"name": "pages/search/search",
 					"pathName": "pages/search/search",
@@ -65,15 +72,37 @@
 				},
 				{
 					"id": -1,
-					"name": "岗位详情",
-					"pathName": "pages/secPage/jobDetail/jobDetail",
-					"query": "id=1",
+					"name": "pages/profile/profile",
+					"pathName": "pages/profile/profile",
+					"query": "expectItem=\"\"&index=3",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "pages/secPage/jobTypesList/jobTypesList",
-					"pathName": "pages/secPage/jobTypesList/jobTypesList",
+					"name": "pages/secPage/onlineResume/onlineResume",
+					"pathName": "pages/secPage/onlineResume/onlineResume",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/secPage/userBaseInfo/userBaseInfo",
+					"pathName": "pages/secPage/userBaseInfo/userBaseInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/secPage/imageCut/imageCut",
+					"pathName": "pages/secPage/imageCut/imageCut",
+					"query": "filePath= http://tmp/wx91ab667bcab13449.o6zAJs9c7dW_AmYbTF-cw0eCtDZw.ZNVhtElylGwl1e05b6b8987d72a45d95cb1e8c000ca9.jpg",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/secPage/editUserDesc/editUserDecs",
+					"pathName": "pages/secPage/editUserDesc/editUserDecs",
+					"query": "filePath= http://tmp/wx91ab667bcab13449.o6zAJs9c7dW_AmYbTF-cw0eCtDZw.ZNVhtElylGwl1e05b6b8987d72a45d95cb1e8c000ca9.jpg",
 					"scene": null
 				}
 			]

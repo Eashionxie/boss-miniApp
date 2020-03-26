@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "x-popup": "/components/x-popup/x-popup",
+    "choose-city": "/components/choose-city/choose-city",
+    "chooseTypes": "../chooseJobTypes/chooseJobTypes"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "",
+  "navigationStyle": "default",
+  "backgroundColor": "#ffffff",
+  "backgroundTextStyle": "dark",
+  "backgroundColorTop": "#ffffff",
+  "backgroundColorBottom": "#ffffff",
+  "enablePullDownRefresh": false
+}

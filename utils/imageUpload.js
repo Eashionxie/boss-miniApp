@@ -7,7 +7,7 @@ const uploadImg = (count = 9, cb) => {
     success (chooseRes) {
       chooseRes.tempFilePaths.forEach(element => {
         wx.uploadFile({
-          url: config.baseUrl + '/mini-api/file/file-upload',
+          url: config.baseUrl + '/mini-api/common/file-upload',
           filePath: element,
           name: 'file',
           formData: { 'openid': wx.getStorageSync('token') },

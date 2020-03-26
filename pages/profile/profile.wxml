@@ -1,7 +1,69 @@
-<!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
-<navigator class="" target="" url="/pages/home/home" hover-class="navigator-hover" open-type="navigate">
-  ToHome
-</navigator>
-<button bindtap="_addCompany">添加公司</button>
-<button bindtap="_addJob">添加职位</button>
+<wxs src="../../wxs/appType.wxs" module="typeFliter" />
+<wxs src="../../wxs/filters.wxs" module="filters"></wxs>
+<view class="bgc_Blue info-contianer">
+  <view class="w90C flexHsb">
+    <view class="info" bindtap="fullUserInfo">
+      <view wx:if="{{userInfo && userInfo.nickName}}" class="font44 font500">{{userInfo.nickName}}</view>
+      <view wx:else class="font44 font500">完善个人信息</view>
+      <view  wx:if="{{userInfo && userInfo.birthday}}" class="font26 p_20TM">
+        {{filters.ageFilter(userInfo.birthday) + '岁 · ' + filters.workExpFilter(userInfo.workDate) + ' · ' +  userInfo.eduLeve}}
+      </view>
+      <view wx:else class="font26 p_20TM">
+        点击此处完善个人信息
+      </view>
+    </view>
+    <view class="header">
+      <image src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+
+<view class="w90C">
+  <view class="menu-item flexHsb" bindtap="fullUserInfo">
+    <view>
+      <text class="iconfont icon-zaixianjianli c_99"></text>
+      <text class="font28 c_33 p_20LM">在线简历</text>
+    </view>
+    <view class="iconfont icon-right c_99"></view>
+  </view>
+
+  <view class="menu-item flexHsb bor_B">
+    <view>
+      <text class="iconfont icon-wenjian c_99"></text>
+      <text class="font28 c_33 p_20LM">附件简历</text>
+    </view>
+    <view class="iconfont icon-right c_99"></view>
+  </view>
+
+  <view class="menu-item flexHsb">
+    <view>
+      <text class="iconfont icon-sey-people-d-a c_99"></text>
+      <text class="font28 c_33 p_20LM">我的面试</text>
+    </view>
+    <view class="iconfont icon-right c_99"></view>
+  </view>
+
+  <view class="menu-item flexHsb bor_B">
+    <view>
+      <text class="iconfont icon-shoucang c_99"></text>
+      <text class="font28 c_33 p_20LM">我的收藏</text>
+    </view>
+    <view class="iconfont icon-right c_99"></view>
+  </view>
+
+  <view class="menu-item flexHsb">
+    <view>
+      <text class="iconfont icon-eye c_99 font26" style="margin-left: -6rpx"></text>
+      <text class="font28 c_33 p_20LM">隐私设置</text>
+    </view>
+    <view class="iconfont icon-right c_99"></view>
+  </view>
+
+  <view class="menu-item flexHsb bor_B">
+    <view>
+      <text class="iconfont icon-yijianfankui c_99"></text>
+      <text class="font28 c_33 p_20LM">意见反馈</text>
+    </view>
+    <view class="iconfont icon-right c_99"></view>
+  </view>
+</view>

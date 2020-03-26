@@ -15,6 +15,13 @@ const tool = {
     index > -1 && array.splice(index, 1)
     index === -1 && array.push(value)
     return array
+  },
+  arrayDeleteEmpty: (array) => {
+    let _arr = []
+    array.map(v => {
+      if (v !== '' || v !== undefined) _arr.push(v)
+    })
+    return _arr
   }
 }
 

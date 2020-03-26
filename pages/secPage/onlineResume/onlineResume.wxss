@@ -1,0 +1,73 @@
+/* pages/secPage/onlineResume/onlineResume.wxss */
+.info-contianer {
+  padding: 60rpx 0 40rpx 0;
+}
+
+.info {
+  width: 70%;
+}
+
+.header {
+  flex: 1;
+  text-align: right;
+}
+
+.header image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.left {
+  flex: 1
+}
+
+.right {
+  flex: 1;
+  padding: 30rpx 0;
+}
+
+.right image, .type-item image {
+  width: 32rpx;
+}
+
+.type-item {
+  padding: 20rpx 0;
+}
+
+.comHei60 {
+  line-height: 60rpx;
+}
+
+.p_20TM {
+  padding-top: 20rpx;
+}
+
+.icon-edit {
+  padding-left: 20rpx;
+}
+
+.bor_B {
+  border-bottom: 1rpx solid #efefee;
+}
+
+.p_10TBM {
+  padding: 10rpx 0;
+}
+
+.p_20BM {
+  padding-bottom: 20rpx;
+}
+
+.p_20TBM {
+  padding: 20rpx 0;
+}
+
+.p_40TBM {
+  padding: 40rpx 0;
+}
+
+.m_60TM {
+  margin-top: 60rpx;
+}

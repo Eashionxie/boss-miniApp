@@ -1,0 +1,74 @@
+/* pages/secPage/userBaseInfo/userBaseInfo.wxss */
+.head-image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #efefef;
+}
+
+.select-button {
+  border: 1rpx solid #019fa0;
+  width: 260rpx;
+  height: 60rpx;
+  line-height: 56rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  display: flex;
+}
+
+.select-button view {
+  width: 50%;
+  font-size: 26rpx;
+}
+
+.right-icon {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.btn {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  bottom: 20rpx;
+  left: 5%;
+  width: 90% !important;
+  height:80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  z-index: 3;
+}
+
+.iosBottom {
+  bottom: 60rpx !important;
+}
+
+.iospaddingb {
+  padding-bottom: 160rpx;
+}
+
+.paddingb {
+  padding-bottom: 100rpx;
+}
+
+.bor_B {
+  border-bottom: 1rpx solid #efefef;
+}
+
+.p_10TM {
+  padding-top: 10rpx;
+}
+
+.m_60TM {
+  margin-top: 60rpx;
+}
+
+.m_80TM {
+  margin-top: 80rpx;
+}
+
+.p_40TBM {
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}

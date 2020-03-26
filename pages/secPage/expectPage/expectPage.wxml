@@ -1,0 +1,80 @@
+<view class="w90C title">
+  <text class="font44 font600">求职期望</text>
+</view>
+<view class="c_66 font28 w90C">
+  将根据求职期望，为您推荐合适的工作
+</view>
+
+<view class="w90C bor_B m_80T">
+  <view class="font30">
+    期望职位
+  </view>
+  <view class="flexHsb p20TB" bindtap="toChooseJobTypes">
+    <view class="{{expectItem && expectItem.jobType ? 'c_33' : 'c_99'}} font36">{{expectItem.jobType || '请选择期望职位'}}</view>
+    <image class="right-arrow" src="/public/icon/right.png" mode="widthFix"></image>
+  </view>
+</view>
+
+<!--<view class="w90C bor_B m_60T">
+  <view class="font30">
+    期望行业
+  </view>
+  <view class="flexHsb p20TB">
+    <view class="c_99 font36">请选择期望行业</view>
+    <image class="right-arrow" src="/public/icon/right.png" mode="widthFix"></image>
+  </view>
+</view>-->
+
+<view class="w90C bor_B m_60T">
+  <view class="font30">
+    工作城市
+  </view>
+  <view class="flexHsb p20TB" bindtap="chooseCity">
+    <view class="{{expectItem && expectItem.city ? 'c_33' : 'c_99'}} font36">{{expectItem.city || '请选择工作城市'}}</view>
+    <image class="right-arrow" src="/public/icon/right.png" mode="widthFix"></image>
+  </view>
+</view>
+
+<view wx:if="{{index == 3}}" class="bgc_Blue btn font30 {{isIphone ? 'iosBottom' : ''}}" bindtap="commit">保存</view>
+<view wx:else class="font30 btn {{isIphone ? 'iosBottom' : ''}}">
+  <view class="bgc_White btn-delete" bindtap="handleDelete">删除</view>
+  <view class="bgc_Blue btn-save" bindtap="commit">保存</view>
+</view>
+
+<x-popup id="choose-types" class="full" wx:if="{{showPop}}" bind:closeDialog="closeDialog">
+  <chooseTypes
+   wx:if="{{showTypes}}"
+   class="choose-job-types"
+   jobTypes="{{jobTypes}}"
+   childTypes="{{childTypes}}"
+   activeType="{{activeType}}"
+   bind:changeParent="changeParent"
+   bind:confirmType="confirmType">
+  </chooseTypes>
+
+  <choose-city
+   wx:if="{{showCitys}}"
+   class="choose-job-types"
+   bind:confirmCity="confirmCity"
+  ></choose-city>
+</x-popup>
+
+<view class="w90C bor_B m_60T p_60B">
+  <view class="font30">
+    薪资要求
+  </view>
+  <picker
+    mode="multiSelector"
+    bindchange="chooseSalarys"
+    bindcolumnchange="bindcolumnchange"
+    value="{{index}}"
+    range-key="value"
+    range="{{salaryColumns}}">
+    <view class="flexHsb p20TB">
+      <view class="{{expectItem && expectItem.minSalary ? 'c_33' : expectItem.minSalary === 0 ? 'c_33' : 'c_99'}} font36">
+        {{expectItem.minSalary ? expectItem.minSalary + 'k - ' + expectItem.maxSalary + 'k' : expectItem.minSalary === 0 ? '面议' : '请选择薪资要求'}}
+      </view>
+      <image class="right-arrow" src="/public/icon/right.png" mode="widthFix"></image>
+    </view>
+  </picker>
+</view>

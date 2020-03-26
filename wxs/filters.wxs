@@ -1,5 +1,6 @@
 module.exports = {
-  dateFormat: function (timestamp = getDate().getTime(), fmt = "yyyy-MM-dd hh:mm") {
+  dateFormat: function (timestamp, fmt = "yyyy-MM-dd hh:mm") {
+    if(!timestamp) return
     timestamp = parseFloat(timestamp)
     var date = getDate(timestamp)
     function timeFormat(num) {
@@ -31,5 +32,19 @@ module.exports = {
   },
   titleFormat: function (val, len) {
     return val.substring(0, len) + '...'
+  },
+  workExpFilter: function (value) {
+    if (!value) return
+    var _time = getDate().getTime() - value
+    if (_time < 365 * 24 * 60 * 60 * 1000) return '一年以内经验'
+    if (_time > 365 * 24 * 60 * 60 * 1000 && _time <= 1.5 * 365 * 24 * 60 * 60 * 1000) return '一年经验'
+    if (_time > 1.5 * 365 * 24 * 60 * 60 * 1000 && _time <= 2.5 * 365 * 24 * 60 * 60 * 1000) return '两年经验'
+    if (_time > 2.5 * 365 * 24 * 60 * 60 * 1000 && _time <= 3.5 * 365 * 24 * 60 * 60 * 1000) return '三年经验'
+    else return '三年以上经验'
+  },
+  ageFilter: function (value) {
+    if (!value) return
+    var _time = getDate().getTime() - value
+    return parseInt(_time / (365 * 24 * 60 * 60 * 1000))
   }
 }

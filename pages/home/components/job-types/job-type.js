@@ -11,6 +11,7 @@ Component({
 
     },
     chooseType(event) {
+      this.triggerEvent('changeType', event.currentTarget.dataset.index)
       this.setData({
         activeIndex: event.currentTarget.dataset.index
       })

@@ -1,32 +1,47 @@
 <view class="input-container">
   <view class="input-box">
     <image class="" src="/public/search.png" mode="widthFix"></image>
-    <input type="text" value="{{keyWords}}" placeholder="搜索职位、公司" focus
-    placeholder-class="holdoor"
-    confirm-type="search"
-    bindfocus="focusInput"
-    bindblur="bindblur"
-    bindconfirm="confirmInput"
-    ></input>
+    <input type="text" value="{{sendData.keyWords}}" placeholder="搜索职位、公司" focus
+      placeholder-class="holdoor"
+      confirm-type="search"
+      bindinput="textInput"
+      bindfocus="focusInput"
+      bindblur="bindblur"
+      bindconfirm="confirmInput"
+    >
+      <text class="{{ showInput && showDel ? 'del-icon' : ''}}" bindtap="clearInput"></text>
+    </input>
   </view>
 </view>
 <view class="main-container">
-  <view wx:if="{{records && records.length}}" class="search-items">
-    <block wx:for="{{records}}" wx:key="index">
-      <job-item></job-item>
-    </block>
-  </view>
+  <scroll-view
+    wx:if="{{!showInput}}"
+    scroll-y
+    style="width: 100%; height: calc(100vh - 140rpx)"
+    refresher-enabled
+    refresher-triggered="{{triggered}}"
+    bindscrolltolower="tolower"
+    bindrefresherpulling="onPulling"
+    bindrefresherrefresh="onRefresh"
+    bindrefresherrestore="onRestore"
+    bindrefresherabort="onAbort">
+    <view class="search-items">
+      <block wx:for="{{records}}" wx:key="index">
+        <job-item itemDetail="{{item}}"></job-item>
+      </block>
+    </view>
+  </scroll-view>
   
   <view wx:else class="search-history">
     <view class="font40 font500">
       历史搜索
     </view>
     <view class="text-content">
-      <view wx:for="{{3}}" wx:key="index"
+      <view wx:for="{{searchHistoryList}}" wx:key="index"
        class="historys"
        bindtap="chooseHistoryItem"
-       data-item="{{item}}">
-        前端开发
+       data-item="{{item.jobType}}">
+        {{item.jobType}}
       </view>
     </view>
   </view>

@@ -1,0 +1,7 @@
+<!--pages/secPage/manage/manage.wxml-->
+<text>pages/secPage/manage/manage.wxml</text>
+<navigator class="" target="" url="/pages/home/home" hover-class="navigator-hover" open-type="navigate">
+  ToHome
+</navigator>
+<button bindtap="_addCompany">添加公司</button>
+<button bindtap="_addJob">添加职位</button>

@@ -1,0 +1,58 @@
+/* pages/secPage/chooseJobTypes/chooseJobTypes.wxss */
+.contianer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  border-top: 1rpx solid #efefef;
+  height: calc(100vh);
+  align-items: flex-start !important;
+  width: 100%;
+}
+
+.left-bar {
+  flex: 1;
+  border-right: 1rpx solid #efefef;
+  height: 100%
+}
+
+.type-item {
+  position: relative;
+  padding: 40rpx 0 40rpx 40rpx;
+  font-size: 28rpx;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6rpx;
+  height: 60rpx;
+  background-color: #019fa0;
+}
+
+.right-content {
+  flex: 3;
+  height: 100%;
+  align-items: flex-start !important;
+  margin-top: 20rpx;
+}
+
+.child-contianer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.child-item {
+  margin-top: 20rpx;
+  width: 44%;
+  margin-left: 4%;
+  padding: 20rpx 0;
+  text-align: center;
+  background-color: #efefef;
+  border-radius: 4rpx;
+  font-size: 26rpx;
+  color: #666666;
+}

@@ -3,7 +3,8 @@ App({
   // 全局数据
   globalData:{
     userInfo: wx.getStorageSync('userInfo'),
-    systemInfo: wx.getSystemInfoSync()
+    systemInfo: wx.getSystemInfoSync(),
+    expectNew: {}
   },
   onLaunch: () => {
     authPromission()

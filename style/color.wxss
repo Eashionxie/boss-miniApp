@@ -80,3 +80,7 @@
   background-color: #ffffff;
   color: #333333
 }
+
+.bgc_ef {
+  background-color: #efefef
+}

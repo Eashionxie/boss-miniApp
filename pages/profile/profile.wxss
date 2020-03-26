@@ -1,1 +1,35 @@
 /* pages/profile/profile.wxss */
+.info-contianer {
+  padding: 60rpx 0 40rpx 0;
+}
+
+.info {
+  width: 70%;
+}
+
+.header {
+  flex: 1;
+  text-align: right;
+}
+
+.header image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.menu-item {
+  padding: 40rpx 0;
+}
+
+.p_20TM {
+  padding-top: 20rpx;
+}
+
+.p_20LM {
+  padding-left: 20rpx;
+}
+
+.bor_B {
+  border-bottom: 1rpx solid #efefee;
+}
