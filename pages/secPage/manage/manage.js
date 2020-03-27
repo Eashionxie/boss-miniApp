@@ -4,70 +4,58 @@ import {  addCompany, addJob } from '../../../api/formPost.js'
 Page({
   data: {
     sendData: {
-      companyName: '捶纸科技',
+      companyName: '公司名称',
       financingType: 0,
       companySize: 0,
       companyType: '1',
-      companyShortDuce: '平果科技母公司',
-      companyIntroduction: 'Thank you for 关注我们，我们一直致力于研发新的技术以提高人们的生活品质',
-      welfares: ['周末双休', '免费咖啡', '生育保险'],
-      companyAvatar: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3107860485,4228739328&fm=26&gp=0.jpg',
-      companyAlbum: [],
+      companyShortDuce: '公司简介',
+      companyIntroduction: '公司介绍',
+      welfares: ['公司福利'],
+      companyAvatar: '公司logo(可用于http访问的图片url)',
+      companyAlbum: ['公司相册'],
       companyAdresses: [
         {
-          fullAddress: '湖北省武汉市东湖高新技术开发区关山街道世贸中心K栋1616',
-          shortAddress: '世贸中心K栋1616',
+          fullAddress: '公司详细地址',
+          shortAddress: '公司地址缩写',
           latlng: {
-            latitude: '30.470832',
-            longitude: '114.421384'
+            latitude: '公司定位纬度',
+            longitude: '公司定位经度'
           },
-          country: '中国',
-          provience: '湖北省',
-          city: '武汉市',
-          area: '东湖高新技术开发区',
-          street: '关山街道',
-          building: '光谷现代世贸中心K栋',
-          No: 1616
+          country: '公司所在国家',
+          provience: '公司所在省份',
+          city: '公司所在城市',
+          area: '公司所在区',
+          street: '公司所在街道',
+          building: '公司所在具体建筑物',
+          No: '公司门牌号码'
         }
       ],
       businessInfo: {
-        established: new Date('2015-12-12').getTime(),
-        registeredCapital: 500,
-        legalRepresentative: '张三'
+        established: new Date('2015-12-12').getTime(), // 公司成立时间
+        registeredCapital: 500, // 注册资金 （单位：万）
+        legalRepresentative: '公司法人代表'
       },
-      officeWeb: 'http://m.maguaxie.cn',
+      officeWeb: 'http://m.maguaxie.cn', // 公司官方网站
       products: [],
       managers: []
     },
     sendData2: {
-      companyId: "5e76ddd24e14242e34081942",
-      jobName: '前端开发',
-      city: '宜昌市',
+      companyId: "公司ID（由服务器返回）",
+      jobName: '岗位名称',
+      city: '所在城市',
       minSalary: 8,
       maxSalary: 16,
       salaryType: '',
       workExp: '经验不限',
       eduLeve: '本科',
-      publisherId: '5e70bcd5165ef23db4b0dff4',
-      detail: `<p>1、熟练掌握 HTML5/CSS3/Javascript/jQuery/React 等前端技术；</p>
-<p>2、熟悉各浏览器间 Web 标准实现差异，了解响应式与自适应布局；</p>
-<p>3、熟悉前端模块化、组件化、工程化开发，熟练使用 Node 开发前端工具；</p>
-<p>4、熟悉常见 Javascript 设计模式，了解 MVC/MVP/MVVM 等架构模式；</p>
-<p>6、能根据设计图快速开发出页面交互效果，根据反馈的bug快速响应并立即处理。</p>`,
-      tags: ['java', 'springBoot', 'springCloud'],
+      publisherId: '发布人ID',
+      detail: `岗位详情描述`,
+      tags: ['岗位标签'],
       exactAddress: {
-        name: '湖北省宜都市宜都市一中',
-        lat: '30.381483',
-        lng: '111.462543'
+        name: '具体地址',
+        lat: '纬度',
+        lng: '经度'
       }
-    },
-    sendData3: {
-      _id: '5e6c9f8856e12c1ebc03e702',
-      companyAvatar: 'http://dl.bbs.9game.cn/attachments/forum/202002/24/163438cmy1qemiieaefmym.png'
-    },
-    sendData4: {
-      _id: '5e70bcd5165ef23db4b0dff4',
-      publisherId: 'oC2r15ahI7lpVA4B48QVhDY4dy68'
     }
   },
   onLoad: function (options) {

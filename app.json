@@ -10,7 +10,6 @@
     "pages/secPage/map/map",
     "pages/secPage/jobTypesList/jobTypesList",
     "pages/secPage/expectPage/expectPage",
-    "pages/secPage/chooseJobTypes/chooseJobTypes",
     "pages/secPage/manage/manage",
     "pages/secPage/onlineResume/onlineResume",
     "pages/secPage/userBaseInfo/userBaseInfo",
