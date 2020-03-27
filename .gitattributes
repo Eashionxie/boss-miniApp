@@ -1,0 +1,4 @@
+*.js linguist-language=javaScript;
+*.wxss linguist-language=wxss;
+*.wxml linguist-language=wxml
+*.wxs linguist-language=miniApp
