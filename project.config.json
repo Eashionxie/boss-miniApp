@@ -104,6 +104,12 @@
 					"pathName": "pages/secPage/editUserDesc/editUserDecs",
 					"query": "filePath= http://tmp/wx91ab667bcab13449.o6zAJs9c7dW_AmYbTF-cw0eCtDZw.ZNVhtElylGwl1e05b6b8987d72a45d95cb1e8c000ca9.jpg",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "管理页面",
+					"pathName": "pages/secPage/manage/manage",
+					"scene": null
 				}
 			]
 		}
